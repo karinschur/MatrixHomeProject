@@ -4,6 +4,7 @@ from pathlib import Path
 import numpy as np
 from typing import Dict
 import xgboost as xgb
+# from xgboost import XGBModel
 from utils import utils
 from utils import constants
 from preprocess.data_preprocess import Preprocessor
@@ -11,7 +12,7 @@ from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 
 
-load_from_data = False
+load_from_data = True
 file_suffix = 'sampling_noise'
 path = os.path.join(Path(os.getcwd()).parent, 'data/')
 preprocessor = Preprocessor(over_sampling=True, noise_aug=True,
